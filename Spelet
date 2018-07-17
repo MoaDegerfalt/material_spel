@@ -1,0 +1,51 @@
+class fråga:
+    def __init__(self, text="",svar=[]):
+        self.text = text
+        self.svar = svar
+
+lista_av_frågor = []
+
+f = fråga()
+f.text = "Vilka fibrer kommer från djur?"
+f.svar = ['Ull', 'Silke']
+lista_av_frågor.append(f)
+
+f = fråga()
+f.text = "Vilket material värmer även när det är blött?"
+f.svar = ['Ull']
+lista_av_frågor.append(f)
+
+f = fråga()
+f.text = "Vilket/vilka fiber syntetiskt framställda?"
+f.svar = ['Viskos', 'Polyester']
+lista_av_frågor.append(f)
+
+f = fråga()
+f.text = "Vilket/vilka fibrer kan odlas i sverige?"
+f.svar = ['Lin']
+lista_av_frågor.append(f)
+
+avkodare = {'w':'Ull',
+            'a':'Viskos',
+            's':'Bomull',
+            'd':'Polyester',
+            'f':'Lin',
+            'g':'Silke'}
+
+def lyssna_på_makey_makey(indata):
+    return list(set(avkodare[c] for c in input(indata) if c in avkodare))
+
+poäng = 0
+for fråga in lista_av_frågor:
+    svar_lista = lyssna_på_makey_makey(fråga.text)
+    print("Du svarade: " + str(svar_lista))
+    for svar in svar_lista:
+        if svar in fråga.svar:
+            print (svar + " är rätt!")
+            poäng = poäng + 2
+        else:
+            print(svar + " är fel...")
+            poäng = poäng - 1
+
+print("Bra jobbat!")
+print("Du fick " + str(poäng) + " poäng")
