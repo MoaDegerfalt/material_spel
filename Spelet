@@ -6,8 +6,13 @@ class fråga:
 lista_av_frågor = []
 
 f = fråga()
-f.text = "Vilka fibrer kommer från djur?"
+f.text = "Vilket/vilka fibrer kommer från djur?"
 f.svar = ['Ull', 'Silke']
+lista_av_frågor.append(f)
+
+f = fråga()
+f.text = "Vilket/vilka fibrer är gjort av olja som råmaterial?"
+f.svar = ['Syntet']
 lista_av_frågor.append(f)
 
 f = fråga()
@@ -16,8 +21,8 @@ f.svar = ['Ull']
 lista_av_frågor.append(f)
 
 f = fråga()
-f.text = "Vilket/vilka fiber syntetiskt framställda?"
-f.svar = ['Viskos', 'Polyester']
+f.text = "Vilket/vilka fibrer bryts inte ner i naturen?"
+f.svar = ['Syntet']
 lista_av_frågor.append(f)
 
 f = fråga()
@@ -25,10 +30,20 @@ f.text = "Vilket/vilka fibrer kan odlas i sverige?"
 f.svar = ['Lin']
 lista_av_frågor.append(f)
 
+f = fråga()
+f.text = "Vilket/vilka fibrer har en naturlig fiberlängd på 4-12cm?"
+f.svar = ['Bomull', 'Ull']
+lista_av_frågor.append(f)
+
+f = fråga()
+f.text = "Vilket/vilka fibrer blir svagare när det blir blött?"
+f.svar = ['Regenat']
+lista_av_frågor.append(f)
+
 avkodare = {'w':'Ull',
-            'a':'Viskos',
+            'a':'Regenat',
             's':'Bomull',
-            'd':'Polyester',
+            'd':'Syntet',
             'f':'Lin',
             'g':'Silke'}
 
